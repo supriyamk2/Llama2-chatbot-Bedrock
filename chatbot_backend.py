@@ -4,14 +4,22 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
 
 def demo_chatbot():
+    aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
+    aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
+
     demo_llm = Bedrock(
-        credentials_profile_name='default',
+        credentials_profile_name='default',  # Adjust profile name if needed
         model_id='meta.llama2-70b-chat-v1',
         model_kwargs={
-            
-            "temperature":0.9,
-            "top_p":0.5,
-            "max_gen_len":512})
+            "temperature": 0.9,
+            "top_p": 0.5,
+            "max_gen_len": 512
+        }, 
+        client_kwargs={  
+           "aws_access_key_id": aws_access_key_id,
+           "aws_secret_access_key": aws_secret_access_key,
+       }
+    )
     return demo_llm
 
     #return demo_llm.invoke(input_text)
