@@ -9,7 +9,7 @@ aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
 
 if 'memory' not in st.session_state:
     st.session_state.memory = demo.demo_memory(aws_access_key_id, aws_secret_access_key)
-    st.session_state.memory  =demo.demo_memory()
+    
     
 if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
