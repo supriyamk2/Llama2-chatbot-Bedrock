@@ -4,8 +4,8 @@ import chatbot_backend as demo
 st.title('Hi, This is LLama 2 model')
 
 # Load AWS credentials from Streamlit secrets
-aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
-aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
+aws_access_key_id = st.secrets["default]["AWS_ACCESS_KEY_ID"]
+aws_secret_access_key = st.secrets["default"]["AWS_SECRET_ACCESS_KEY"]
 
 # Initialize demo_memory with AWS credentials
 if 'memory' not in st.session_state:
