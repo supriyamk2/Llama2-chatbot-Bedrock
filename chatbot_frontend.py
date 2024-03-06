@@ -7,6 +7,9 @@ st.title('Hi, This is LLama 2 model')
 aws_access_key_id = st.secrets["supriya-pillai"]["AWS_ACCESS_KEY_ID"]
 aws_secret_access_key = st.secrets["supriya-pillai"]["AWS_SECRET_ACCESS_KEY"]
 
+print(f"AWS Access Key ID: {aws_access_key_id}")
+print(f"AWS Secret Access Key: {aws_secret_access_key}")
+
 # Initialize demo_memory with AWS credentials
 if 'memory' not in st.session_state:
     st.session_state.memory = demo.demo_memory(aws_access_key_id, aws_secret_access_key)
