@@ -1,6 +1,6 @@
 # Llama2-chatbot-Bedrock
 Project Title: Amazon Bedrock Chatbot with Llama 2, Langchain, and Streamlit
-![Project Demo](image.png)
+![Project Demo](llama_demo.png)
 Description:
 
 This project aims to build a sophisticated and interactive chatbot leveraging the power of Amazon Bedrock, Llama 2, Langchain, and Streamlit. The chatbot will be designed to provide users with a seamless and intuitive conversational experience, incorporating advanced language understanding and generation capabilities.
